@@ -34,15 +34,3 @@ Config.FishVendorLocations = {
 	{name = 'Tumbleweed Fish Vendor', 	location = 'tumbleweed-fishvendor', coords = vector3(-5513.275, -2943.476, -2.025686),	showblip = true}, -- tumbleweed
 	{name = 'River Fish Vendor', 		location = 'river-fishvendor', 		coords = vector3(-1451.595, -2685.068, 41.228832),	showblip = false}, -- river
 }
-
-Config.FishVendorNpc = {
-	
-	[1] = { ["Model"] = "CS_FISHCOLLECTOR", ["Pos"] = vector3(2662.2517, -1505.653, 45.968982 -1),	["Heading"] = 315.91998 }, -- fish vendor st-denis
-	[2] = { ["Model"] = "CS_FISHCOLLECTOR", ["Pos"] = vector3(-335.5372, 761.984, 116.58402 -1), 	["Heading"] = 39.627689 }, -- fish vendor valentine
-	[3] = { ["Model"] = "CS_FISHCOLLECTOR", ["Pos"] = vector3(1292.9488, -1274.879, 75.814758 -1),	["Heading"] = 178.26869 }, -- fish vendor rhodes
-	[4] = { ["Model"] = "CS_FISHCOLLECTOR", ["Pos"] = vector3(3017.9001, 1352.2457, 42.735687 -1),	["Heading"] = 340.58428 }, -- fish vendor anusburg
-	[5] = { ["Model"] = "CS_FISHCOLLECTOR", ["Pos"] = vector3(2991.6115, 558.83947, 44.355224 -1),	["Heading"] = 356.12011 }, -- fish vendor van-horn
-	[6] = { ["Model"] = "CS_FISHCOLLECTOR", ["Pos"] = vector3(-724.5062, -1253.603, 44.734111 -1),	["Heading"] = 60.658256 }, -- fish vendor blackwater	
-	[7] = { ["Model"] = "CS_FISHCOLLECTOR", ["Pos"] = vector3(-5513.275, -2943.476, -2.025686 -1),	["Heading"] = 49.367053 }, -- fish vendor tumbelweed
-	[8] = { ["Model"] = "CS_FISHCOLLECTOR", ["Pos"] = vector3(-1451.595, -2685.068, 41.228832 -1),	["Heading"] = 234.17779 }, -- fish vendor river
-}
