@@ -1,10 +1,10 @@
-local QRCore = exports['qr-core']:GetCoreObject()
+local RSGCore = exports['rsg-core']:GetCoreObject()
 
 -- sell small fish
 RegisterServerEvent('rsg-fishvendor:server:sellsmallfish')
 AddEventHandler('rsg-fishvendor:server:sellsmallfish', function()
     local src = source
-    local Player = QRCore.Functions.GetPlayer(src)
+    local Player = RSGCore.Functions.GetPlayer(src)
     local price = 0
     local hassmallfish = false
     if Player.PlayerData.items ~= nil and next(Player.PlayerData.items) ~= nil then 
@@ -39,10 +39,10 @@ AddEventHandler('rsg-fishvendor:server:sellsmallfish', function()
         end
         if hassmallfish == true then
             Player.Functions.AddMoney("cash", price, "fish-sold")
-            QRCore.Functions.Notify(source, 'you have sold your small fish for $'..price, 'success')
+            RSGCore.Functions.Notify(source, 'you have sold your small fish for $'..price, 'success')
             hassmallfish = false
         else
-            QRCore.Functions.Notify(source, 'you don\'t have any small fish to sell!', 'error')
+            RSGCore.Functions.Notify(source, 'you don\'t have any small fish to sell!', 'error')
         end
     end
 end)
@@ -51,7 +51,7 @@ end)
 RegisterServerEvent('rsg-fishvendor:server:sellmediumfish')
 AddEventHandler('rsg-fishvendor:server:sellmediumfish', function()
     local src = source
-    local Player = QRCore.Functions.GetPlayer(src)
+    local Player = RSGCore.Functions.GetPlayer(src)
     local price = 0
     local hasmediumfish = false
     if Player.PlayerData.items ~= nil and next(Player.PlayerData.items) ~= nil then 
@@ -106,10 +106,10 @@ AddEventHandler('rsg-fishvendor:server:sellmediumfish', function()
         end
         if hasmediumfish == true then
             Player.Functions.AddMoney("cash", price, "fish-sold")
-            QRCore.Functions.Notify(source, 'you have sold your medium fish for $'..price, 'success')
+            RSGCore.Functions.Notify(source, 'you have sold your medium fish for $'..price, 'success')
             hasmediumfish = false
         else
-            QRCore.Functions.Notify(source, 'you don\'t have any medium fish to sell!', 'error')
+            RSGCore.Functions.Notify(source, 'you don\'t have any medium fish to sell!', 'error')
         end
     end
 end)
@@ -118,7 +118,7 @@ end)
 RegisterServerEvent('rsg-fishvendor:server:selllargefish')
 AddEventHandler('rsg-fishvendor:server:selllargefish', function()
     local src = source
-    local Player = QRCore.Functions.GetPlayer(src)
+    local Player = RSGCore.Functions.GetPlayer(src)
     local price = 0
     local haslargefish = false
     if Player.PlayerData.items ~= nil and next(Player.PlayerData.items) ~= nil then 
@@ -169,10 +169,10 @@ AddEventHandler('rsg-fishvendor:server:selllargefish', function()
         end
         if haslargefish == true then
             Player.Functions.AddMoney("cash", price, "fish-sold")
-            QRCore.Functions.Notify(source, 'you have sold your large fish for $'..price, 'success')
+            RSGCore.Functions.Notify(source, 'you have sold your large fish for $'..price, 'success')
             haslargefish = false
         else
-            QRCore.Functions.Notify(source, 'you don\'t have any large fish to sell!', 'error')
+            RSGCore.Functions.Notify(source, 'you don\'t have any large fish to sell!', 'error')
         end
     end
 end)

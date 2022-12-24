@@ -1,4 +1,4 @@
-local QRCore = exports['qr-core']:GetCoreObject()
+local RSGCore = exports['rsg-core']:GetCoreObject()
 local fishvendor
 local name = nil
 
@@ -6,7 +6,7 @@ local name = nil
 Citizen.CreateThread(function()
     for fishvendor, v in pairs(Config.FishVendorLocations) do
         local name = v.name
-        exports['qr-core']:createPrompt(v.location, v.coords, QRCore.Shared.Keybinds['J'], 'Open ' .. v.name, {
+        exports['rsg-core']:createPrompt(v.location, v.coords, RSGCore.Shared.Keybinds['J'], 'Open ' .. v.name, {
             type = 'client',
             event = 'rsg-fishvendor:client:menu',
             args = { name },
@@ -35,7 +35,7 @@ end)
 
 -- fishvendor menu
 RegisterNetEvent('rsg-fishvendor:client:menu', function(vendorname)
-    exports['qr-menu']:openMenu({
+    exports['rsg-menu']:openMenu({
         {
             header = vendorname,
             isMenuHeader = true,
@@ -81,7 +81,7 @@ RegisterNetEvent('rsg-fishvendor:client:menu', function(vendorname)
             header = "Close Menu",
             txt = '',
             params = {
-                event = 'qr-menu:closeMenu',
+                event = 'rsg-menu:closeMenu',
             }
         },
     })
