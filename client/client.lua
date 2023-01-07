@@ -6,7 +6,7 @@ local name = nil
 Citizen.CreateThread(function()
     for fishvendor, v in pairs(Config.FishVendorLocations) do
         local name = v.name
-        exports['rsg-core']:createPrompt(v.location, v.coords, RSGCore.Shared.Keybinds['J'], 'Open ' .. v.name, {
+        exports['rsg-core']:createPrompt(v.location, v.coords, RSGCore.Shared.Keybinds['J'], Lang:t('menu.open_prompt') .. v.name, {
             type = 'client',
             event = 'rsg-fishvendor:client:menu',
             args = { name },
@@ -41,8 +41,8 @@ RegisterNetEvent('rsg-fishvendor:client:menu', function(vendorname)
             isMenuHeader = true,
         },
         {
-            header = "Sell Small Fish",
-            txt = "we currently pay $"..Config.SmallFishPrice..".00 per small fish",
+            header = Lang:t('menu.sell_small_fish'),
+            txt = Lang:t('menu.we_currently_pay')..Config.SmallFishPrice..Lang:t('menu.per_small_fish'),
             icon = "fas fa-fish",
             params = {
                 event = 'rsg-fishvendor:server:sellsmallfish',
@@ -50,8 +50,8 @@ RegisterNetEvent('rsg-fishvendor:client:menu', function(vendorname)
             }
         },
         {
-            header = "Sell Medium Fish",
-            txt = "we currently pay $"..Config.MediumFishPrice..".00 per medium fish",
+            header = Lang:t('menu.sell_medium_fish'),
+            txt = Lang:t('menu.we_currently_pay')..Config.MediumFishPrice..Lang:t('menu.per_medium_fish'),
             icon = "fas fa-fish",
             params = {
                 event = 'rsg-fishvendor:server:sellmediumfish',
@@ -59,8 +59,8 @@ RegisterNetEvent('rsg-fishvendor:client:menu', function(vendorname)
             }
         },
         {
-            header = "Sell Large Fish",
-            txt = "we currently pay $"..Config.LargeFishPrice..".00 per large fish",
+            header = Lang:t('menu.sell_large_fish'),
+            txt = Lang:t('menu.we_currently_pay')..Config.LargeFishPrice..Lang:t('menu.per_large_fish'),
             icon = "fas fa-fish",
             params = {
                 event = 'rsg-fishvendor:server:selllargefish',
@@ -68,8 +68,8 @@ RegisterNetEvent('rsg-fishvendor:client:menu', function(vendorname)
             }
         },
         {
-            header = "Open Fish Vendor Shop",
-            txt = "buy items from the fish vendor",
+            header = Lang:t('menu.open_shop'),
+            txt = Lang:t('menu.buy_items_txt'),
             icon = "fas fa-shopping-basket",
             params = {
                 event = 'rsg-fishvendor:client:OpenFishVendorShop',
@@ -78,7 +78,7 @@ RegisterNetEvent('rsg-fishvendor:client:menu', function(vendorname)
             }
         },
         {
-            header = "Close Menu",
+            header = Lang:t('menu.close_menu'),
             txt = '',
             params = {
                 event = 'rsg-menu:closeMenu',

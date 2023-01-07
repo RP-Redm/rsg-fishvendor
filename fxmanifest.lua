@@ -15,6 +15,8 @@ server_scripts {
 
 shared_scripts {
     'config.lua',
+    '@rsg-core/shared/locale.lua',
+    'locales/en.lua', -- Change this to your preferred language
 }
 
 dependency 'rsg-core'

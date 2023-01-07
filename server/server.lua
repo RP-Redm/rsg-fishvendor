@@ -39,10 +39,10 @@ AddEventHandler('rsg-fishvendor:server:sellsmallfish', function()
         end
         if hassmallfish == true then
             Player.Functions.AddMoney("cash", price, "fish-sold")
-            RSGCore.Functions.Notify(source, 'you have sold your small fish for $'..price, 'success')
+            RSGCore.Functions.Notify(source, Lang:t('success.small_fish_sold')..price, 'success')
             hassmallfish = false
         else
-            RSGCore.Functions.Notify(source, 'you don\'t have any small fish to sell!', 'error')
+            RSGCore.Functions.Notify(source, Lang:t('error.no_small_fish'), 'error')
         end
     end
 end)
@@ -106,10 +106,10 @@ AddEventHandler('rsg-fishvendor:server:sellmediumfish', function()
         end
         if hasmediumfish == true then
             Player.Functions.AddMoney("cash", price, "fish-sold")
-            RSGCore.Functions.Notify(source, 'you have sold your medium fish for $'..price, 'success')
+            RSGCore.Functions.Notify(source, Lang:t('success.medium_fish_sold')..price, 'success')
             hasmediumfish = false
         else
-            RSGCore.Functions.Notify(source, 'you don\'t have any medium fish to sell!', 'error')
+            RSGCore.Functions.Notify(source, Lang:t('error.no_medium_fish'), 'error')
         end
     end
 end)
@@ -169,10 +169,10 @@ AddEventHandler('rsg-fishvendor:server:selllargefish', function()
         end
         if haslargefish == true then
             Player.Functions.AddMoney("cash", price, "fish-sold")
-            RSGCore.Functions.Notify(source, 'you have sold your large fish for $'..price, 'success')
+            RSGCore.Functions.Notify(source, Lang:t('success.large_fish_sold')..price, 'success')
             haslargefish = false
         else
-            RSGCore.Functions.Notify(source, 'you don\'t have any large fish to sell!', 'error')
+            RSGCore.Functions.Notify(source, Lang:t('error.no_large_fish'), 'error')
         end
     end
 end)
