@@ -24,12 +24,12 @@ Config.FishVendorShop = {
 
 -- prompt locations
 Config.FishVendorLocations = {
-    {name = 'St Denis Fish Vendor',   location = 'stdenis-fishvendor',    coords = vector3(2662.2517, -1505.653, 45.968982 -0.8), showblip = true, showmarker = true}, --st denis
-    {name = 'Valentine Fish Vendor',  location = 'valentine-fishvendor',  coords = vector3(-335.5372, 761.984, 116.58402 -0.8),   showblip = true, showmarker = true}, --valentine
-    {name = 'Rhodes Fish Vendor',     location = 'rhodes-fishvendor',     coords = vector3(1292.9488, -1274.879, 75.814758 -0.8), showblip = true, showmarker = true}, -- rhodes
-    {name = 'Annesburg Fish Vendor',  location = 'annesburg-fishvendor',  coords = vector3(3017.9001, 1352.2457, 42.735687 -0.8), showblip = true, showmarker = true}, -- annesburg
-    {name = 'Van Horn Fish Vendor',   location = 'vanhorn-fishvendor',    coords = vector3(2991.6115, 558.83947, 44.355224 -0.8), showblip = true, showmarker = true}, -- vanhorn
-    {name = 'Blackwater Fish Vendor', location = 'blackwater-fishvendor', coords = vector3(-724.5062, -1253.603, 44.734111 -0.8), showblip = true, showmarker = true}, -- blackwater
-    {name = 'Tumbleweed Fish Vendor', location = 'tumbleweed-fishvendor', coords = vector3(-5513.275, -2943.476, -2.025686 -0.8), showblip = true, showmarker = true}, -- tumbleweed
-    {name = 'River Fish Vendor',      location = 'river-fishvendor',      coords = vector3(-1451.595, -2685.068, 41.228832 -0.8), showblip = false, showmarker = true}, -- river
+    {name = 'St Denis Fish Vendor',   location = 'stdenis-fishvendor',    coords = vector3(2662.2517, -1505.653, 45.968982 -0.8), showblip = true}, --st denis
+    {name = 'Valentine Fish Vendor',  location = 'valentine-fishvendor',  coords = vector3(-335.5372, 761.984, 116.58402 -0.8),   showblip = true}, --valentine
+    {name = 'Rhodes Fish Vendor',     location = 'rhodes-fishvendor',     coords = vector3(1292.9488, -1274.879, 75.814758 -0.8), showblip = true}, -- rhodes
+    {name = 'Annesburg Fish Vendor',  location = 'annesburg-fishvendor',  coords = vector3(3017.9001, 1352.2457, 42.735687 -0.8), showblip = true}, -- annesburg
+    {name = 'Van Horn Fish Vendor',   location = 'vanhorn-fishvendor',    coords = vector3(2991.6115, 558.83947, 44.355224 -0.8), showblip = true}, -- vanhorn
+    {name = 'Blackwater Fish Vendor', location = 'blackwater-fishvendor', coords = vector3(-724.5062, -1253.603, 44.734111 -0.8), showblip = true}, -- blackwater
+    {name = 'Tumbleweed Fish Vendor', location = 'tumbleweed-fishvendor', coords = vector3(-5513.275, -2943.476, -2.025686 -0.8), showblip = true}, -- tumbleweed
+    {name = 'River Fish Vendor',      location = 'river-fishvendor',      coords = vector3(-1451.595, -2685.068, 41.228832 -0.8), showblip = false}, -- river
 }
