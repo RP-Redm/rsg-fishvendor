@@ -2,7 +2,7 @@ local RSGCore = exports['rsg-core']:GetCoreObject()
 local fishvendor
 local name = nil
 
--- prompts
+-- fishvendor prompts
 Citizen.CreateThread(function()
     for fishvendor, v in pairs(Config.FishVendorLocations) do
         local name = v.name
@@ -22,58 +22,43 @@ end)
 
 -- fishvendor menu
 RegisterNetEvent('rsg-fishvendor:client:menu', function(vendorname)
-    exports['rsg-menu']:openMenu({
+    lib.registerContext(
         {
-            header = vendorname,
-            isMenuHeader = true,
-        },
-        {
-            header = Lang:t('menu.sell_small_fish'),
-            txt = Lang:t('menu.we_currently_pay')..Config.SmallFishPrice..Lang:t('menu.per_small_fish'),
-            icon = "fas fa-fish",
-            params = {
-                event = 'rsg-fishvendor:server:sellsmallfish',
-                isServer = true,
+            id = 'fishventor_menu',
+            title = vendorname,
+            position = 'top-right',
+            options = {
+                {
+                    title = Lang:t('menu.sell_small_fish'),
+                    description = Lang:t('menu.we_currently_pay')..Config.SmallFishPrice..Lang:t('menu.per_small_fish'),
+                    icon = 'fas fa-fish',
+                    serverEvent = 'rsg-fishvendor:server:sellsmallfish',
+                },
+                {
+                    title = Lang:t('menu.sell_medium_fish'),
+                    description = Lang:t('menu.we_currently_pay')..Config.MediumFishPrice..Lang:t('menu.per_medium_fish'),
+                    icon = 'fas fa-fish',
+                    serverEvent = 'rsg-fishvendor:server:sellmediumfish',
+                },
+                {
+                    title = Lang:t('menu.sell_large_fish'),
+                    description = Lang:t('menu.we_currently_pay')..Config.LargeFishPrice..Lang:t('menu.per_large_fish'),
+                    icon = 'fas fa-fish',
+                    serverEvent = 'rsg-fishvendor:server:selllargefish',
+                },
+                {
+                    title = Lang:t('menu.open_shop'),
+                    description = Lang:t('menu.buy_items_txt'),
+                    icon = 'fas fa-shopping-basket',
+                    event = 'rsg-fishvendor:client:OpenFishVendorShop',
+                },
             }
-        },
-        {
-            header = Lang:t('menu.sell_medium_fish'),
-            txt = Lang:t('menu.we_currently_pay')..Config.MediumFishPrice..Lang:t('menu.per_medium_fish'),
-            icon = "fas fa-fish",
-            params = {
-                event = 'rsg-fishvendor:server:sellmediumfish',
-                isServer = true,
-            }
-        },
-        {
-            header = Lang:t('menu.sell_large_fish'),
-            txt = Lang:t('menu.we_currently_pay')..Config.LargeFishPrice..Lang:t('menu.per_large_fish'),
-            icon = "fas fa-fish",
-            params = {
-                event = 'rsg-fishvendor:server:selllargefish',
-                isServer = true,
-            }
-        },
-        {
-            header = Lang:t('menu.open_shop'),
-            txt = Lang:t('menu.buy_items_txt'),
-            icon = "fas fa-shopping-basket",
-            params = {
-                event = 'rsg-fishvendor:client:OpenFishVendorShop',
-                isServer = false,
-                args = {}
-            }
-        },
-        {
-            header = Lang:t('menu.close_menu'),
-            txt = '',
-            params = {
-                event = 'rsg-menu:closeMenu',
-            }
-        },
-    })
+        }
+    )
+    lib.showContext('fishventor_menu')
 end)
 
+-- fishvendor shop
 RegisterNetEvent('rsg-fishvendor:client:OpenFishVendorShop')
 AddEventHandler('rsg-fishvendor:client:OpenFishVendorShop', function()
     local ShopItems = {}
